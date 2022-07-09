@@ -15,11 +15,13 @@ const GlobalStyles = createGlobalStyle`
         width: 100%;
     }
     body {
-        background-color: ${props => props.theme.colors.background1};
-        min-height: 100vh;
+        background-color: ${props => props.theme.colors.offwhite};
         font-family: 'Nunito', sans-serif;
         font-weight: 400;
-        
+    }
+    .about-body, .contact-body{
+        display: flex;
+        justify-content: center;
     }
 `;
 
