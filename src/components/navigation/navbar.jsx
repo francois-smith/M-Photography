@@ -1,11 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import Logo from "../../media/images/CursiveLogo.svg"
-import { NavigationBar, MainLinks } from "./navbar-styles";
+import Logo from "../../media/svgs/logo-cursive.svg"
+import { NavigationBar, MainLinks, NavigationContainer } from "./navbar-styles";
+import Burger from "./burger-menu";
 
 function Navigation(){
     return(
-        <div className="Navigation">
+        <NavigationContainer>
             <NavigationBar>
                 <div>
                     <MainLinks>
@@ -37,7 +38,8 @@ function Navigation(){
                     </MainLinks>
                 </div>
             </NavigationBar>
-        </div>
+            <Burger/>
+        </NavigationContainer>
     );
 }
 
