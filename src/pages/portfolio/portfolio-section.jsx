@@ -39,7 +39,7 @@ const sections = [
 
 function Portfolio() {
 	return (
-		<>
+		<body>
 			<h3>Portfolio Page</h3>
 			{
 				sections.map((user, index) => (
@@ -48,7 +48,7 @@ function Portfolio() {
 					</h5>
 				))
 			}
-		</>
+		</body>
 	);
 }
 
