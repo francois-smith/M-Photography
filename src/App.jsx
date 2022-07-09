@@ -1,11 +1,10 @@
 import React from 'react';
 import Navigation from './components/navigation/navbar';
 import Footer from './components/footer';
-import { BrowserRouter as Router, Routes, Route}
-    from 'react-router-dom';
-import Home from './pages';
-import About from './pages/about';
-import Contact from './pages/contact';
+import { HashRouter as Router, Routes, Route} from 'react-router-dom';  
+import Home from './pages/home';
+import About from './pages/about/about';
+import Contact from './pages/contact/contact';
 import Portfolio from './pages/portfolio/portfolio-section'
 import Theme from './styles/theme';
 
@@ -15,10 +14,10 @@ function App() {
 			<Router>
 				<Navigation />
 				<Routes>
-					<Route exact path='/' element={<Home/>} />
-					<Route path='/about' element={<About/>} />
-					<Route path='/portfolio' element={<Portfolio/>} />
-					<Route path='/contact' element={<Contact/>} />
+					<Route render exact path='/' element={<Home/>} />
+					<Route exact path='/about'  element={<About/>} />
+					<Route exact path='/portfolio' element={<Portfolio/>} />
+					<Route exact path='/contact' element={<Contact/>} />
 				</Routes>
 				<Footer />
 			</Router>
