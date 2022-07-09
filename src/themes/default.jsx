@@ -7,9 +7,11 @@ export default {
         text: "#f2f1ef"
     },
     breakpoints: {
-        sm: 'screen and (max-width: 640px)',
-        md: 'screen and (max-width: 768px)',
+        xsm: 'screen and (max-width: 320px)',
+        sm: 'screen and (max-width: 568px)',
+        md: 'screen and (max-width: 800px)',
         lg: 'screen and (max-width: 1024px)',
-        xl: 'screen and (max-width: 1280px)'
+        xl: 'screen and (max-width: 1280px)',
+        xxl: 'screen and (max-width: 1440px)',
     },
 }
