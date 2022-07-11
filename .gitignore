@@ -13,6 +13,7 @@ db.php
 # production
 /build
 /admin
+public/uploads
 
 # misc
 .DS_Store
