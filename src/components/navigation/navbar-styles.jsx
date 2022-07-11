@@ -28,6 +28,11 @@ export const NavigationContainer = styled.div`
         color: ${props => props.theme.colors.rosegold} !important;
         z-index: 100;
         position: relative;
+        pointer-events: none;
+    }
+
+    .active-link:after{
+        width: 100% !important;
     }
 
     div{
@@ -50,7 +55,7 @@ export const NavigationContainer = styled.div`
     }
 
     .bm-burger-bars-hover {
-        background: ${props => props.theme.colors.rosegold};;
+        background: ${props => props.theme.colors.rosegold};
     }
 
     .bm-cross-button {
@@ -113,6 +118,16 @@ export const NavigationContainer = styled.div`
         transition: all 0.6s;
     }
 
+    .nav-section-arrow{
+        top: 17.5px;
+        position: absolute;
+        right: -10px;
+        height: 12px;
+        width: 15px;
+        transform-origin: center;
+        transition: all 0.6s;
+    }
+
     .menu-item-sub-container{
         max-height: 53px;
         overflow: hidden;
@@ -160,6 +175,74 @@ export const MainLinks = styled.ul`
         list-style: none;
     }
 
+    .text-link{
+        padding: 10px;
+        position: relative;
+    }
+
+    .text-link, .text-link:after, .text-link:before {
+        transition: all .4s;
+    }
+
+    .text-link:after, .text-link:before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0%;
+        content: '.';
+        color: transparent;
+        background: ${props => props.theme.colors.rosegold};
+        height: 1px;
+    }
+
+    .text-link:hover:after {
+        width: 100%;
+    }
+
+    .text-link:hover {
+        color: ${props => props.theme.colors.rosegold};
+    }
+
+    .navigation-sub-items{
+        position: absolute;
+        top: 40px;
+        background-color: ${props => props.theme.colors.silver};
+        z-index: 1;
+        width: 100%;
+        overflow: hidden;
+        max-height: 0px;
+        transition: all 0.5s;
+    }
+
+    .navigation-item-sub{
+        margin: 10px;
+        padding: 5px 0px;
+    }
+
+    .navigation-item-sub a{
+        color: ${props => props.theme.colors.offwhite};
+    }
+
+    .navigation-menu{
+        position: relative;
+    }
+
+    .portfolio-nav:hover + .navigation-sub-items{
+        max-height: 450%;
+        transition: all 0.6s linear 0.25s;
+    }
+
+    .navigation-sub-items:hover{
+        max-height: 450%;
+    }
+
+    .portfolio-nav:hover .nav-section-arrow{
+        transform: rotate(90deg);
+        filter: invert(70%) sepia(10%) saturate(1541%) hue-rotate(306deg) brightness(81%) contrast(84%);
+    }
+
     @media ${props => props.theme.breakpoints.xl}{
         padding: 25px 5em;
     }
@@ -168,7 +251,7 @@ export const MainLinks = styled.ul`
         padding: 25px 1em;
         justify-content: flex-start;
 
-        .active-link, .inactive-link{
+        .active-link, .inactive-link, .navigation-menu{
             display: none;
         }
     }
