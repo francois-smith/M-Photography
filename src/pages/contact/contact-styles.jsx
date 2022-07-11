@@ -1,5 +1,38 @@
 import styled from "styled-components";
 
+export const NoticeContainer = styled.div`
+    margin: 15px 0px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 20px 25px;
+    width: 80%;
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+    font-size: 1.3em;
+
+    img{
+        height: 50px;
+        padding-right: 15px;
+    }
+
+    @media ${props => props.theme.breakpoints.lg}{
+        font-size: 1.2em;
+
+        img{
+            height: 40px;
+        }
+    }
+
+    @media ${props => props.theme.breakpoints.sm}{
+        font-size: 1em;
+        margin: 15px 0px 30px;
+
+        img{
+            height: 35px;
+        }
+    }
+`;
+
 export const ContactContainer = styled.div`
     display: flex;
     width: 70%;
