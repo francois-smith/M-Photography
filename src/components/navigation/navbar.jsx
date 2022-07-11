@@ -4,6 +4,7 @@ import Logo from "../../media/svgs/logo-cursive.svg"
 import { NavigationBar, MainLinks, NavigationContainer } from "./navbar-styles";
 import Burger from "./burger-menu";
 import Arrow from "../../media/svgs/arrow-head.svg"
+import Divider from "../../media/svgs/divider.svg"
 
 function Navigation(){
     return(
@@ -23,7 +24,7 @@ function Navigation(){
                         </li>
                         <li>
                             <NavLink className="logo-cursive" to="/">
-                                <img src={Logo} alt="Logo" />
+                                <img id="main-logo" src={Logo} alt="Logo" />
                             </NavLink>
                         </li>
                         <div className='navigation-menu'>
@@ -43,6 +44,11 @@ function Navigation(){
                             </NavLink>
                         </li>
                     </MainLinks>
+                    <div className="divider-container">
+                        <div className="divider-image-container">
+                            <img src={Divider} alt="Divider" />
+                        </div>
+                    </div>
                 </div>
             </NavigationBar>
             <Burger/>

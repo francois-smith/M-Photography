@@ -7,22 +7,27 @@ export const NavigationBar = styled.nav`
         font-size: 20px;
     }
 
-    img{
+    #main-logo{
         max-width: 600px;
         width: 75vw;
         z-index: 1050;
         position: relative;
     }
 
+    .divider-container{
+        width: 90%;
+    }
+
     @media ${props => props.theme.breakpoints.xl}{
-        img{
+        #main-logo{
             max-width: 400px;
         }
+        
     }
 `;
 
 export const NavigationContainer = styled.div`
-    padding-top: 25px;
+    padding: 25px 0px 30px;
 
     .active-link, .active{
         color: ${props => props.theme.colors.rosegold} !important;
@@ -169,7 +174,7 @@ export const MainLinks = styled.ul`
     width: 100vw;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 10em;
+    padding: 25px 10em 40px;
 
     li{
         list-style: none;
@@ -251,7 +256,7 @@ export const MainLinks = styled.ul`
         padding: 25px 1em;
         justify-content: flex-start;
 
-        .active-link, .inactive-link, .navigation-menu{
+        .active-link, .inactive-link, .navigation-menu, .divider-image-container{
             display: none;
         }
     }
