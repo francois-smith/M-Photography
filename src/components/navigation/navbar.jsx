@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import Logo from "../../media/svgs/logo-cursive.svg"
 import { NavigationBar, MainLinks, NavigationContainer } from "./navbar-styles";
 import Burger from "./burger-menu";
+import Arrow from "../../media/svgs/arrow-head.svg"
 
 function Navigation(){
     return(
@@ -11,12 +12,12 @@ function Navigation(){
                 <div>
                     <MainLinks>
                         <li>
-                            <NavLink className={({ isActive }) => (isActive ? 'active-link' : 'inactive-link')} to="/">
+                            <NavLink className={({ isActive }) => (isActive ? 'active-link text-link' : 'inactive-link text-link')} to="/">
                                 HOME
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink className={({ isActive }) => (isActive ? 'active-link' : 'inactive-link')} to="/about">
+                            <NavLink className={({ isActive }) => (isActive ? 'active-link text-link' : 'inactive-link text-link')} to="/about">
                                 ABOUT ME
                             </NavLink>
                         </li>
@@ -25,13 +26,19 @@ function Navigation(){
                                 <img src={Logo} alt="Logo" />
                             </NavLink>
                         </li>
+                        <div className='navigation-menu'>
+                            <a className="text-link portfolio-nav">PORTFOLIO<img className='nav-section-arrow' src={Arrow} alt="section arrow"/></a>
+                            <div className='navigation-sub-items'>
+                                <div className="navigation-item-sub">
+                                    <NavLink id="navigation-portfolio-location" className={({ isActive }) => (isActive ? 'active-link' : 'inactive-link')} to="/portfolio/location">On Location</NavLink>
+                                </div>
+                                <div className="navigation-item-sub">
+                                    <NavLink id="navigation-portfolio-studio" className={({ isActive }) => (isActive ? 'active-link' : 'inactive-link')} to="/portfolio/studio">Studio</NavLink>
+                                </div>
+                            </div>
+                        </div>
                         <li>
-                            <NavLink className={({ isActive }) => (isActive ? 'active-link' : 'inactive-link')} to="/portfolio">
-                                PORTFOLIO
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink className={({ isActive }) => (isActive ? 'active-link' : 'inactive-link')} to="/contact">
+                            <NavLink className={({ isActive }) => (isActive ? 'active-link text-link' : 'inactive-link text-link')} to="/contact">
                                 CONTACT
                             </NavLink>
                         </li>
