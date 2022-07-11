@@ -10,14 +10,8 @@ export const FooterContainer = styled.div`
         padding-bottom: 25px;
     }
 
-    .footer-divider{
-        width: 100%;
-        height: 0.08em;
-        margin: 25px 0px;
-        background-color: ${props => props.theme.colors.darkgray};
-    }
-
     .footer-content{
+        padding-top: 20px;
         display: flex;
         align-items: center;
     }

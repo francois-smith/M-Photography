@@ -2,6 +2,7 @@ import React from "react";
 import {FooterContainer} from "./footer-styles"
 import FLogo from "../media/svgs/f-logo.svg"
 import {AiOutlineInstagram, AiFillFacebook} from "react-icons/ai"
+import Divider from "../media/svgs/divider.svg"
 
 const style = { color: "#413f3d", fontSize: "2.5em" }
 
@@ -9,7 +10,11 @@ function Footer() {
 	return (
 		<FooterContainer>
 			<footer>
-				<div className="footer-divider"/>
+				<div className="divider-container">
+					<div className="divider-image-container">
+						<img src={Divider} alt="Divider" />
+					</div>
+				</div>
 				<div className="footer-content">
 					<p id="copyright-notice">
 						&copy;2016-{new Date().getFullYear()} Maryna M Photography
