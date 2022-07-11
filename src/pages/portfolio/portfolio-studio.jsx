@@ -4,19 +4,24 @@ import { PortfolioSection } from "./portfolio-styles"
 
 const sections = [
 	{ 
-        name: `Newborn`
+        name: `Newborn`,
+		caption: `All Of God's Grace`,
     },
 	{
 		name: `Milkbath`,
+		caption: `Natural Beauty`,
 	},
 	{
 		name: `Cakesmash`,
+		caption: `Cuteness In Overdose`,
 	},
 	{
 		name: `Portfolio`,
+		caption: `Express Yourself`,
 	},
 	{
 		name: `Baby Milestone`,
+		caption: `Capture The Journey`,
 	},
 ]
 
@@ -85,9 +90,10 @@ function Portfolio() {
 		<PortfolioSection>
 			<div className="portfolio-sections-container">
 				{sections.map((item) => (
-					<NavLink  key={item.name} to={`/portfolio/${item.name.replaceAll(" ", "+").toLowerCase()}`}>
+					<NavLink className="section-link" key={item.name} to={`/portfolio/${item.name.replaceAll(" ", "+").toLowerCase()}`}>
 						<div className="section-card">
-							<h1>{item.name}</h1>
+							<h2>{item.name.toUpperCase()}</h2>
+							<span>{item.caption}</span>
 							<div className="section-card-image">
 								<img src={ typeof getSectionThumb(item) !== 'undefined' ? getSectionThumb(item).src : ""} alt="Section Card Image"/>
 							</div>
