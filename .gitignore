@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 ColorRef.jpg
+db.php
 
 # testing
 /coverage
