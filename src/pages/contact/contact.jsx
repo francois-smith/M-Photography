@@ -170,7 +170,7 @@ function Contact() {
 									<MenuItem value={"Studio Newborn"}>Newborn</MenuItem>
 									<MenuItem value={"Studio Cakesmash"}>Cakesmash</MenuItem>
 									<MenuItem value={"Studio Milkbath"}>Milkbath</MenuItem>
-									<MenuItem value={"Studio Milestone"}>Milestone</MenuItem>
+									<MenuItem value={"Studio Mini's"}>Mini's (seasonal)</MenuItem>
 									<ListSubheader style={{paddingLeft: "30px"}}>On Location</ListSubheader>
 									<MenuItem value={"Couple/Engagement"}>Couple or Engagement</MenuItem>
 									<MenuItem value={"Family"}>Family</MenuItem>
