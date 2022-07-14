@@ -108,7 +108,7 @@ export const PortfolioSection = styled.div`
     }
 
     .section-card-image img{
-        object-position: top center;
+        object-position: center;
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -135,7 +135,7 @@ export const PortfolioSection = styled.div`
             height: 250px;
 
             h2{
-                font-size: 1.5em;
+                font-size: 1.35em;
                 padding-bottom: 10px;
             }
             
@@ -145,7 +145,7 @@ export const PortfolioSection = styled.div`
 
             span{
                 opacity: 1;
-                font-size: 1.8em;
+                font-size: 1.7em;
             }
         }
     }
