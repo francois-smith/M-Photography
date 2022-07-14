@@ -20,8 +20,8 @@ const sections = [
 		caption: `Express Yourself`,
 	},
 	{
-		name: `Baby Milestone`,
-		caption: `Capture The Journey`,
+		name: `Studio Mini's`,
+		caption: `Fun Moments`,
 	},
 ]
 
@@ -34,14 +34,14 @@ function Portfolio() {
     const [milkbathImages, setMilkbath] = useState([]);
     const [cakeImages, setCake] = useState([]);
     const [portfolioImages, setPortfolio] = useState([]);
-    const [milestoneImages, setMilestone] = useState([]);
+    const [miniImages, setMinis] = useState([]);
 
     useEffect(() => {
         getImages("studio-newborn");
 		getImages("studio-milkbath");
 		getImages("studio-cakesmash");
 		getImages("studio-portfolio");
-		getImages("studio-milestone");
+		getImages("studio-minis");
 
 		function getImages(type) {
 			let url = 'https://maryna-m-photography.com/db.php';
@@ -62,7 +62,7 @@ function Portfolio() {
 					case "studio-milkbath": setMilkbath(data.data); break;
 					case "studio-cakesmash": setCake(data.data); break;
 					case "studio-portfolio": setPortfolio(data.data); break;
-					case "studio-milestone": setMilestone(data.data); break;
+					case "studio-minis": setMinis(data.data); break;
 				}
 			});
 		}
@@ -78,7 +78,7 @@ function Portfolio() {
 			case "Milkbath": return milkbathImages;
 			case "Cakesmash": return cakeImages;
 			case "Portfolio": return portfolioImages;
-			case "Baby Milestone": return milestoneImages;
+			case "Studio Mini's": return miniImages;
 		}
 	}
 
