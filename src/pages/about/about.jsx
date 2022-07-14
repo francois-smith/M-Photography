@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { AboutContainer } from "./about-styles"
 import AboutImage from "../../media/images/about-photo.jpg"
+import Vendor from "../../media/images/top-vendor.png"
 
 function About(){
 	useEffect(() => {
@@ -23,6 +24,9 @@ function About(){
 					<p>I specialize in portrait photography and love beautiful outdoor locations.</p>
 					<p>To capture your memories and special moments is my passion and I would be honoured to be capturing the most memorable moments of your life. Photos are the most important thing in the world that you can treasure and hold close to your heart for the rest of your life.</p>
 					<p>It would be my absolute pleasure to travel to any location to meet with you and book your next session.</p>
+					<div className="award-image">
+						<img src={Vendor} alt="Top Vendor Award" />
+					</div>
 				</div>
 			</AboutContainer>
 		</div>

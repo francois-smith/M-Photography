@@ -15,6 +15,16 @@ export const AboutContainer = styled.div`
         
     }
 
+    .award-image{
+        display: flex;
+        justify-content: center;
+        padding-top: 25px;
+
+        img{
+            width: 200px;
+        }
+    }
+
     #about-quote{
         font-size: 1.25rem;
         max-width: 350px;
