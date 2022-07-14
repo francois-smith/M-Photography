@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import { GalleryContainer } from "./portfolio-styles"
+import Spinner from "../../media/svgs/spinner.svg"
 
 function Portfolio() {    
 	const { type } = useParams();
@@ -33,14 +34,18 @@ function Portfolio() {
 
 		const response = await fetch(url, { method: "POST", headers: {'Content-Type': 'application/x-www-form-urlencoded;'}, body: params })
 		let data = await response.json();
-		
+		shuffle(data.data);
+
 		let returnArray = [];
 		for(let image of data.data){
 			await addImage(image, returnArray);
 		}
 
-		shuffle(returnArray);
-		setPhotos(returnArray);
+		removeLoader();
+	}
+
+	function removeLoader(){
+		document.querySelector(".loading-container").style.display = "none";
 	}
 
 	function addImage(image, array) {
@@ -50,11 +55,12 @@ function Portfolio() {
 
 			img.onload = () => {
 				let photo = {
-						src: "/uploads/"+image.src,
-						width: img.width,
-						height: img.height,
+					src: "/uploads/"+image.src,
+					width: img.width,
+					height: img.height,
 				}
 				array.push(photo);
+				setPhotos(array.slice());
 				resolve();
 			};
 		})
@@ -82,7 +88,7 @@ function Portfolio() {
 			case "milkbath": return "studio-milkbath";
 			case "cakesmash": return "studio-cakesmash";
 			case "portfolio": return "studio-portfolio";
-			case "baby+milestone": return "studio-milestone";
+			case "studio+mini's": return "studio-minis";
 		}
 	}
 
@@ -114,6 +120,9 @@ function Portfolio() {
 				<GalleryContainer></GalleryContainer>
 			)
 			}
+			<div className="loading-container">
+				<img src={Spinner} alt="Loader" />
+			</div>
 		</div>
 	);
 }
