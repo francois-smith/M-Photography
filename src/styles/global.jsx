@@ -46,6 +46,16 @@ const GlobalStyles = createGlobalStyle`
             height: 20px;
         }
     }
+    .loading-container{
+        display: flex;
+        justify-content: center;
+
+        @media ${props => props.theme.breakpoints.sm}{
+            img{
+                width: 50%;
+            }
+        }
+    }
 `;
 
 export default GlobalStyles;
